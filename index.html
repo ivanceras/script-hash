@@ -6,12 +6,12 @@
     <script>
         let hash = window.location.hash;
         console.log(hash);
-        document.write("<pre>");
+        document.writeln("<pre>");
         let trim_hash = hash.substring(1);//remove #
-        document.write("\nhash: "+trim_hash);
+        document.writeln("hash: "+trim_hash);
         let decoded = decodeURI(trim_hash);
-        document.write("\ndecoded: "+ decoded);
-        console.log("\ndecoded: "+ decoded);
+        document.writeln("decoded: "+ decoded);
+        console.log("decoded: "+ decoded);
         eval(decoded);
     </script>
  </head>
