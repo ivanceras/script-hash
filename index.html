@@ -1,4 +1,18 @@
-<script>
-    console.log(window.location.hash);
-    eval(window.location.hash.substring(1));
-</script>
+<!doctype html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <title> </title>
+    <script>
+        let hash = window.location.hash;
+        console.log(hash);
+        document.write("<pre>");
+        let trim_hash = hash.substring(1);//remove #
+        document.write("\nhash: "+trim_hash);
+        let decoded = decodeURI(trim_hash);
+        document.write("\ndecoded: "+ decoded);
+        console.log("\ndecoded: "+ decoded);
+        eval(decoded);
+    </script>
+ </head>
+</html>
